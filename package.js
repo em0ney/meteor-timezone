@@ -1,15 +1,19 @@
 Package.describe({
-  name: 'mrt:timezone',
-  summary: 'DEPRECATED: USE em0ney:timezone',
-  version: '0.0.2'
+  name: 'em0ney:timezone',
+  summary: 'Package to set the user\'s timezone on their user profile',
+  version: '0.1.0'
 });
 
-Package.on_use(function (api) {
+Package.onUse(function(api) {
   api.versionsFrom('0.9.0');
-  api.use('templating@1.0.4', 'client');
-  api.add_files([
-    'meteor-timezone.html',
-    'meteor-timezone.js'
+  api.use([
+    'tracker@1.0.7',
+    'session'
   ], 'client');
+
+  api.addFiles([
+    'meteor-timezone.js'
+  ]);
+
   api.export('Timezone');
 });
