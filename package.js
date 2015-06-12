@@ -5,7 +5,8 @@ Package.describe({
 });
 
 Package.on_use(function (api) {
-  api.use('templating', 'client');
+  api.versionsFrom('0.9.0');
+  api.use('templating:1.0.4', 'client');
   api.add_files([
     'meteor-timezone.html',
     'meteor-timezone.js'
