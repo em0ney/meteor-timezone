@@ -36,9 +36,16 @@ Timezone = {
     }
   },
 
-  GMTDateInUserTimezone: function(date) {
+  userTimeFromGMT: function(date) {
     if (Meteor.userId()) {
       date.setTime(date.getTime() + 36000 * parseInt(this.getTimezoneOffset()));
+      return date;
+    }
+  },
+
+  userTimeToGMT: function(date) {
+    if (Meteor.userId()) {
+      date.setTime(date.getTime() - 36000 * parseInt(this.getTimezoneOffset()));
       return date;
     }
   }
