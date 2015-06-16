@@ -27,4 +27,6 @@ Convert GMT/UTC time to user's timezone:
 
 Convert user time to GMT/UTCL
 
-  Timezone.userTimeToGMT(date);
+    Timezone.userTimeToGMT(date);
+
+On the server side, `Timezone.checkTimezone()` will return the timezone offset of the server.
