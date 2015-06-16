@@ -1,7 +1,7 @@
 Package.describe({
   name: 'em0ney:timezone',
   summary: 'Package to set the user\'s timezone on their user profile',
-  version: '0.1.1'
+  version: '0.1.2'
 });
 
 Package.onUse(function(api) {

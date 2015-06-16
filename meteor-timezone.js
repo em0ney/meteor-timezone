@@ -69,12 +69,13 @@ if (Meteor.isServer) {
         }
       }
     });
-    Timezone.checkTimezone = function() {
-      var offset = new Date().getTimezoneOffset();
-      offset = ((offset < 0 ? '+' : '-')
-            + Timezone.pad(parseInt(Math.abs(offset / 60)), 2)
-            + Timezone.pad(Math.abs(offset % 60), 2));
-      return offset;
-    }
   });
+
+  Timezone.checkTimezone = function() {
+    var offset = new Date().getTimezoneOffset();
+    offset = ((offset < 0 ? '+' : '-')
+          + Timezone.pad(parseInt(Math.abs(offset / 60)), 2)
+          + Timezone.pad(Math.abs(offset % 60), 2));
+    return offset;
+  }
 }
