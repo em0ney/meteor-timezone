@@ -1,7 +1,8 @@
 Package.describe({
   name: 'em0ney:timezone',
   summary: 'Package to set the user\'s timezone on their user profile',
-  version: '0.1.2'
+  git: 'https://github.com:em0ney/meteor-timezone.git',
+  version: '0.1.3'
 });
 
 Package.onUse(function(api) {
